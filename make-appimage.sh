@@ -13,7 +13,10 @@ export ICON=/usr/share/icons/hicolor/scalable/apps/classin.svg
 export LD_LIBRARY_PATH="/opt/apps/classin/lib:${LD_LIBRARY_PATH:-}"
 
 # Deploy dependencies
-quick-sharun /opt/apps/classin/* /opt/apps/classin/html/lib/* /opt/apps/classin/lib/* /usr/lib/libgtk-3.so*
+quick-sharun /opt/apps/classin/ClassIn /usr/lib/libgtk-3.so*
+
+# Copy application assets and plugins into AppDir (without overwriting AppRun)
+cp -rn /opt/apps/classin/* ./AppDir/
 
 # Turn AppDir into AppImage
 quick-sharun --make-appimage
