@@ -10,7 +10,7 @@ export DESKTOP=/usr/share/applications/classin.desktop
 export ICON=/usr/share/icons/hicolor/scalable/apps/classin.svg
 
 # Deploy dependencies
-quick-sharun /opt/apps/classin/html/lib/* /opt/apps/classin/lib/* /usr/lib/libgtk-3.so*
+quick-sharun /opt/apps/classin/ClassIn /opt/apps/classin/html/lib/* /opt/apps/classin/lib/* /usr/lib/libgtk-3.so*
 
 # Turn AppDir into AppImage
 quick-sharun --make-appimage
